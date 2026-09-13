@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snackify - Online Snack Shop</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        snackorange: "#E87520",
+                        snackcream: "#FFF7ED",
+                        snackbrown: "#3B2418",
+                        snackyellow: "#F5B942"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-snackcream text-snackbrown">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+
+        <div class="flex items-center gap-2">
+            <div class="bg-snackorange text-white rounded-full w-11 h-11 flex items-center justify-center text-xl">
+                🍿
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold text-snackorange">Snackify</h1>
+                <p class="text-xs text-gray-500">Taste Happiness</p>
+            </div>
+        </div>
+
+        <div class="hidden md:flex gap-8 font-medium">
+            <a href="#home" class="hover:text-snackorange">Home</a>
+            <a href="#categories" class="hover:text-snackorange">Categories</a>
+            <a href="#products" class="hover:text-snackorange">Snacks</a>
+            <a href="#offers" class="hover:text-snackorange">Offers</a>
+            <a href="#reviews" class="hover:text-snackorange">Reviews</a>
+        </div>
+
+        <button class="bg-snackorange text-white px-5 py-2 rounded-full font-semibold hover:bg-orange-700">
+            🛒 Cart
+        </button>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section id="home" class="bg-orange-100">
+    <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10 items-center">
+
+        <div>
+            <span class="bg-orange-200 text-snackorange px-4 py-2 rounded-full text-sm font-bold">
+                FRESH • CRISPY • DELICIOUS
+            </span>
+
+            <h2 class="text-5xl md:text-6xl font-extrabold mt-6 leading-tight">
+                Your Favorite
+                <span class="text-snackorange">Snacks</span>
+                Are Here!
+            </h2>
+
+            <p class="text-gray-600 text-lg mt-5 leading-8">
+                Discover delicious snacks for every mood. From crispy chips
+                and crunchy cookies to chocolates, popcorn and traditional
+                treats, Snackify brings happiness straight to your door.
+            </p>
+
+            <div class="flex gap-4 mt-7">
+                <a href="#products"
+                   class="bg-snackorange text-white px-7 py-3 rounded-full font-bold hover:bg-orange-700">
+                    Shop Now
+                </a>
+
+                <a href="#offers"
+                   class="border-2 border-snackorange text-snackorange px-7 py-3 rounded-full font-bold">
+                    View Offers
+                </a>
+            </div>
+
+            <div class="flex gap-8 mt-9">
+                <div>
+                    <h3 class="text-2xl font-bold">30+</h3>
+                    <p class="text-gray-500">Snacks</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold">10K+</h3>
+                    <p class="text-gray-500">Happy Customers</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold">4.8</h3>
+                    <p class="text-gray-500">Customer Rating</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img
+                src="https://images.openai.com/static-rsc-4/S8RL9NJMnR5dN2OLkcUGJYeeu8qoeu9tOmZeboLP5WjsH3DmP0PO5UR5SYgo7mimwsJyWtPqFZTgA3RD23Aajw1ll8Pv7kSHHCQs7Hjfhnx4DxVrmKR9w1XrquYLwSeb3hTweR6gGyorcGxhFdcaExf_1CnC2IGfm6uhJbDzAhg?purpose=inline"
+                class="rounded-3xl shadow-xl w-full h-[480px] object-cover"
+                alt="Snacks">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CATEGORIES -->
+<section id="categories" class="max-w-7xl mx-auto px-5 py-16">
+
+    <div class="text-center mb-10">
+        <p class="text-snackorange font-bold uppercase">Explore</p>
+        <h2 class="text-4xl font-bold mt-2">Snack Categories</h2>
+        <p class="text-gray-500 mt-3">
+            Pick your favorite category and discover something delicious.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🍟</div>
+            <h3 class="font-bold mt-3">Chips</h3>
+            <p class="text-sm text-gray-500">25 items</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🍪</div>
+            <h3 class="font-bold mt-3">Cookies</h3>
+            <p class="text-sm text-gray-500">18 items</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🍫</div>
+            <h3 class="font-bold mt-3">Chocolate</h3>
+            <p class="text-sm text-gray-500">22 items</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🍿</div>
+            <h3 class="font-bold mt-3">Popcorn</h3>
+            <p class="text-sm text-gray-500">12 items</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🧁</div>
+            <h3 class="font-bold mt-3">Bakery</h3>
+            <p class="text-sm text-gray-500">20 items</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 text-center shadow hover:-translate-y-2 transition">
+            <div class="text-5xl">🥨</div>
+            <h3 class="font-bold mt-3">Traditional</h3>
+            <p class="text-sm text-gray-500">15 items</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- OFFERS -->
+<section id="offers" class="bg-snackbrown text-white">
+    <div class="max-w-7xl mx-auto px-5 py-14">
+
+        <div class="text-center">
+            <p class="text-snackyellow font-bold">SPECIAL DEALS</p>
+            <h2 class="text-4xl font-bold mt-2">Snack More, Save More!</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+            <div class="bg-orange-600 rounded-2xl p-7">
+                <p class="text-sm font-bold">WEEKEND DEAL</p>
+                <h3 class="text-3xl font-bold mt-3">20% OFF</h3>
+                <p class="mt-3">On orders above ₹499</p>
+                <button class="bg-white text-snackbrown px-5 py-2 rounded-full mt-5 font-bold">
+                    SHOP DEAL
+                </button>
+            </div>
+
+            <div class="bg-snackyellow text-snackbrown rounded-2xl p-7">
+                <p class="text-sm font-bold">COMBO OFFER</p>
+                <h3 class="text-3xl font-bold mt-3">Snack Box</h3>
+                <p class="mt-3">5 favorite snacks for ₹299</p>
+                <button class="bg-snackbrown text-white px-5 py-2 rounded-full mt-5 font-bold">
+                    GRAB IT
+                </button>
+            </div>
+
+            <div class="bg-white text-snackbrown rounded-2xl p-7">
+                <p class="text-sm font-bold text-snackorange">FIRST ORDER</p>
+                <h3 class="text-3xl font-bold mt-3">₹100 OFF</h3>
+                <p class="mt-3">Use code: SNACK100</p>
+                <button class="bg-snackorange text-white px-5 py-2 rounded-full mt-5 font-bold">
+                    ORDER NOW
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products" class="max-w-7xl mx-auto px-5 py-16">
+
+    <div class="text-center mb-10">
+        <p class="text-snackorange font-bold">OUR COLLECTION</p>
+        <h2 class="text-4xl font-bold mt-2">Popular Snacks</h2>
+        <p class="text-gray-500 mt-3">
+            Freshly selected snacks for your everyday cravings.
+        </p>
+    </div>
+
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+
+
+        <!-- 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Potato Chips">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">CHIPS</p>
+                <h3 class="text-lg font-bold mt-1">Classic Potato Chips</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹60</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1600952841320-db92ec4047ca?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="French Fries">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">FRIES</p>
+                <h3 class="text-lg font-bold mt-1">Crispy French Fries</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹90</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Cookies">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">COOKIES</p>
+                <h3 class="text-lg font-bold mt-1">Chocolate Cookies</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹120</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Chocolate">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">CHOCOLATE</p>
+                <h3 class="text-lg font-bold mt-1">Dark Chocolate Bar</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹150</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1585647347384-2593bc35786b?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Popcorn">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">POPCORN</p>
+                <h3 class="text-lg font-bold mt-1">Butter Popcorn</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹80</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 6 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/p_AYgdJk2YWq8DhDWwe3Vv2jUFlMmvxLAZCq4mXB9b-56BLJb_zG1dNkolmK6_30sLxfV3pcCBEvAz9W0uVX--4BH_LMtw6t4zg36EEIPPz-RyR2BtAvP1tFjYy4HH418dTeKmugQ27wZDjFllBGesa9yWlGQo13sUlbb52ICtAYYBSqkOzbZQ8uShijkKAd?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Donut">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Chocolate Donut</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹70</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 7 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Cupcake">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Vanilla Cupcake</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹65</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 8 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/kRohc3WRtCxVCfcWQ5khGZFwqaMVcm-xLouY-9l7KcOodURIHbojNkNmngjSj-vPFFNJx7sDZ-CUSbTSpykQjSjnQ4McGSpRQvFT1SUK_kREDY59At27FCE81jfG32ZmfdRzCeQcElVQrRdqNYiJSvu8GubkrfziQ9Wph95nwX4?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Samosa">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">TRADITIONAL</p>
+                <h3 class="text-lg font-bold mt-1">Crispy Samosa</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹40</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 9 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Brownie">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Chocolate Brownie</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹110</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 10 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/n_UzCfgvLkmollckZfpLQyYALrFBk6eZfY7hPqXbh0RD3YmMPd5zxaoDrpIQ_P9m9REMyG8ydGuXAa8-Qq9CQlMByoZ6hQ5RSwwxU7l_AJgkGQcLqQSAHOPFqOqztWClKFaRCp4GyBHomXNGbANRIbKKzwdZXOhq5zaTHYN42m4?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Croissant">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Butter Croissant</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹95</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 11 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Cake">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">CAKES</p>
+                <h3 class="text-lg font-bold mt-1">Chocolate Cake</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹180</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 12 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/zHfQ7g66SB0tsG-a62bTkSZEqDk4REivrwMe6zW9tv6zgQqv76nKE6EbuhnSq2-NwTbUrC3uEqMLRWGUQwPgDENoWl-4bTn_RHVZbyqwBXxHDJhCRvvG02hgiV0WYtxIextRJPTSXzFastfQs19lFdPAV1K7QezKWTP-Lo6F0S40bbuVX2VuA4UFtrn8sPPE?purpose=fullsize"
+                 class="w-full h-52 object-cover" alt="Macaron">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">SWEETS</p>
+                <h3 class="text-lg font-bold mt-1">French Macarons</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹160</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 13 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/rACcghPbhGOH39IZCwdm-O40URqXF1RBLq8BYsihma7KulmQSSXitnequm9W0DooL-CwxU-MWg7p9OJZc7SM2vtAOUGq3llPY88KKBEX_ZT4K9dz5LWoOsHkRMmJGt_RCqWVKqNV2iGZZq8ppQgqiC8WJQO8cDykwfDHgYJrtRs?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Pretzel">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">SNACKS</p>
+                <h3 class="text-lg font-bold mt-1">Salted Pretzel</h3>
+                <p class="text-yellow-500 mt-2">★★★★☆</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹85</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 14 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/MYQ8joGGkzs48darZadHtHhcdUQAeOyThysMBv6Ejl0A8a5yaVSHAZuuyqItKDrCSn1eQawwjiODSMXfcBBx_QsPzK9OLR7MXh8lo_zwF-CpFsNTYhiYWkSJsPfH_LXt99WIyaqf2hn51-rWm_lewlT4zp_6GyPGkZqbblQrsoI?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Nuts">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">HEALTHY</p>
+                <h3 class="text-lg font-bold mt-1">Roasted Almonds</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹220</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 15 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Waffles">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">DESSERT</p>
+                <h3 class="text-lg font-bold mt-1">Belgian Waffles</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹140</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 16 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/vK0bSsCMFMb8bLWUXM1Yj2iz_dErYND4do4q90vWDUOU13JpljSZCoYvLWMEoZVs_mqVvraGJjZcn0E2U0G6h41W0cODrpqUrREcBF3BCHrlSNJXih4jAzo2I5CjuRSOlNyto1KCsX-LCzc1WxtmVvmOPox6IFFrbXOTQgXxqEw?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Muffin">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Blueberry Muffin</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹90</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 17 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/skA-b8atF1OKaHeeQZDGrCsZ8QnoFGNjtyjy1IC89BZ6KTwJWUc9RFW8kNZMQxh2seGZpoh-fUhTj50DncHAoIDEcFa2zxJG8TGz7CLn-MxBLrHflF4I1qDXh7wYuTau8PAbmLQ0hSuu2KK16LPQGv8VMYVfPctlAZkdxkc_w1Y?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Sandwich">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">QUICK BITES</p>
+                <h3 class="text-lg font-bold mt-1">Cheese Sandwich</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹120</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 18 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Pizza">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">QUICK BITES</p>
+                <h3 class="text-lg font-bold mt-1">Mini Cheese Pizza</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹150</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 19 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/lRv8NSQMzANdpw7fLLYOISTnZuJfNZWHdiEmyXvj7MqiaT0qzhrpjkOTG5g5qgjj4t3WSsv58aB37J2JvdywGMO2rJ5v1LtewZszY2hnuGkI1-rBrbnRDy9PAiZF_vfeFqe6wN9Jdh9OFyqMNtAsy3O-5XAMMFHc5oKRVPnrNhs?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Pakora">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">INDIAN</p>
+                <h3 class="text-lg font-bold mt-1">Crispy Pakora</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹70</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 20 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Nuggets">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">QUICK BITES</p>
+                <h3 class="text-lg font-bold mt-1">Crispy Nuggets</h3>
+                <p class="text-yellow-500 mt-2">★★★★☆</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹130</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 21 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/soaOPfIu7rzXL8aYtg8cgAWe6UtyHOKlG2ed5_-eIHGo3aJr31WcUwxph831OhEHyo_HrA8M22lfmxfhgOy79X_KK6-nk39wVAMJLjwKto3qriG1_BhbB3yJpvZnO0ZD6bWeR1sajD1SGXxt23om9tbNhhTvKI2_gB5YoBGNDyU?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Samosa">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">INDIAN</p>
+                <h3 class="text-lg font-bold mt-1">Paneer Samosa</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹55</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 22 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/iCEZzEmIFSmEkNW4s78hJtck09dkyjLINQhrY3ZTAMCvFEsxSW8-G5dqYJrlUuMFN3Y83n9eUAX3QE3KIcErt2lX9jpfLeOs7plbc2Xi5BArM-9z0BVFIWQeZWjbisKekbA-opKNaaxUgUOZONiNWQD6pG5eGdEtWgTB4J6cwmWTlaTKgkYFlMizZJpLRWKt?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Cashews">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">NUTS</p>
+                <h3 class="text-lg font-bold mt-1">Salted Cashews</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹200</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 23 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/x94koVp-BbLVANm-GfIq4HO8OTEL0c87p7_f6CjFysYydpX84dU-rvutNaaaFPcgrvP9r8m-CqII0CUoMqZI-_GxRt7bOkUnjLTQFBElqkDYdRZ2nA2PfxJGlwSN9fe7tcXYN4a-9DmxIVrJj0ngjxXc5M_NHt2bj7VU2pB5Z80?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Ice Cream">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">DESSERT</p>
+                <h3 class="text-lg font-bold mt-1">Chocolate Ice Cream</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹100</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 24 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/axmpLMoQNZw20DXgIXClnICGyZGFbeqbrQHfhb6iMAb7qWeuQCq6WwFwcCHDiWTRcSCjVE_BQQIjnIczPt00QmrasLD3lLA633z7NSIsnVNYNKU7H8ecw4znC_L8n1wHuXL49FjoxTcih8e27jg6fWehNx0VGNlGuuQbZnTshmz6MA6kbEsoWf6x22-nkmKR?purpose=fullsize"
+                 class="w-full h-52 object-cover" alt="Cake">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">DESSERT</p>
+                <h3 class="text-lg font-bold mt-1">Strawberry Cake</h3>
+                <p class="text-yellow-500 mt-2">★★★★☆</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹170</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <!-- 25 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?auto=format&fit=crop&w=600&q=80"
+                 class="w-full h-52 object-cover" alt="Pastry">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">PASTRY</p>
+                <h3 class="text-lg font-bold mt-1">Cream Pastry</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹75</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 26 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/je0eUOyZUepAB5VhxUuC5b2dMTLEEPy4JQYUS0xjGrTfdavo2ravYsrD901W5ZVxaOE6MNZ4giEbO4W47sUJVdY7qOELRN4QUxWHznYNNL98OLH4oDdt0tZ3QO68kVdxZdq4YMJKyAxp2QsBh9co9F7IhZhYgTwfObnIkfH5EbDUtjxCWwru3GmyaPmQHD2r?purpose=fullsize"
+                 class="w-full h-52 object-cover" alt="Biscuit">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BISCUITS</p>
+                <h3 class="text-lg font-bold mt-1">Butter Biscuits</h3>
+                <p class="text-yellow-500 mt-2">★★★★☆</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹80</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 27 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/uh-O4afFsHkEeiKhBtt_q6X6Oaz-h96em4mmmTvpHIPHB0oprsWh2LvKPfJYktYUVOwLUjpKZT1ki1bAg3rA803kJHQWGle2rTsdkexA75tgE0j9U6kfWzlp0G2pbaD8WhL3TeCMiElyCKzo2byMQePYTOPCtImweY1d5g_jOZk?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Kachori">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">INDIAN</p>
+                <h3 class="text-lg font-bold mt-1">Spicy Kachori</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹45</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 28 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+            <img src="https://images.openai.com/static-rsc-4/KjBPTByBJNy1-HEYiChZ1DOILyUuksF89Xd_qC_b3edcgOXyraMcw1cGEa9hJO7VKs1YdoloFiexl8rfa6V-Gj0k_yg6fhut_L7rIYYsrXD4c5-ftdNR-QRxdcmVzKgM3W0lDnJWORYFUuk_XaMj4gXFoV0Opu4QkQHd-thVnDE?purpose=inline"
+                 class="w-full h-52 object-cover" alt="Cupcake">
+            <div class="p-5">
+                <p class="text-xs text-snackorange font-bold">BAKERY</p>
+                <h3 class="text-lg font-bold mt-1">Red Velvet Cupcake</h3>
+                <p class="text-yellow-500 mt-2">★★★★★</p>
+                <div class="flex justify-between items-center mt-3">
+                    <span class="font-bold text-xl">₹100</span>
+                    <button class="bg-snackorange text-white px-4 py-2 rounded-full">Add</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- UNDER 100 -->
+<section class="bg-orange-100">
+    <div class="max-w-7xl mx-auto px-5 py-16">
+
+        <div class="flex flex-col md:flex-row justify-between md:items-end gap-4">
+            <div>
+                <p class="text-snackorange font-bold">BUDGET FRIENDLY</p>
+                <h2 class="text-4xl font-bold mt-2">Tasty Snacks Under ₹100</h2>
+                <p class="text-gray-600 mt-3">
+                    Great taste doesn't have to be expensive.
+                </p>
+            </div>
+
+            <button class="bg-snackorange text-white px-6 py-3 rounded-full font-bold">
+                Explore All
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6 mt-9">
+
+            <div class="bg-white p-5 rounded-2xl">
+                <h3 class="font-bold text-xl">Classic Chips</h3>
+                <p class="text-gray-500 mt-2">Crispy & spicy</p>
+                <p class="font-bold text-snackorange text-xl mt-4">₹60</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl">
+                <h3 class="font-bold text-xl">Samosa</h3>
+                <p class="text-gray-500 mt-2">Hot & crispy</p>
+                <p class="font-bold text-snackorange text-xl mt-4">₹40</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl">
+                <h3 class="font-bold text-xl">Chocolate Donut</h3>
+                <p class="text-gray-500 mt-2">Soft & chocolaty</p>
+                <p class="font-bold text-snackorange text-xl mt-4">₹70</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl">
+                <h3 class="font-bold text-xl">Butter Cookies</h3>
+                <p class="text-gray-500 mt-2">Crunchy & buttery</p>
+                <p class="font-bold text-snackorange text-xl mt-4">₹80</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="max-w-7xl mx-auto px-5 py-16">
+
+    <div class="text-center">
+        <p class="text-snackorange font-bold">WHY SNACKIFY?</p>
+        <h2 class="text-4xl font-bold mt-2">Made For Snack Lovers</h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-7 mt-10">
+
+        <div class="bg-white p-7 rounded-2xl shadow text-center">
+            <div class="text-4xl">🥨</div>
+            <h3 class="font-bold text-xl mt-4">Fresh Snacks</h3>
+            <p class="text-gray-500 mt-2">
+                Carefully selected for freshness and great taste.
+            </p>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl shadow text-center">
+            <div class="text-4xl">🚚</div>
+            <h3 class="font-bold text-xl mt-4">Fast Delivery</h3>
+            <p class="text-gray-500 mt-2">
+                Get your favorite snacks delivered quickly.
+            </p>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl shadow text-center">
+            <div class="text-4xl">💰</div>
+            <h3 class="font-bold text-xl mt-4">Best Prices</h3>
+            <p class="text-gray-500 mt-2">
+                Delicious products at affordable prices.
+            </p>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl shadow text-center">
+            <div class="text-4xl">⭐</div>
+            <h3 class="font-bold text-xl mt-4">Quality First</h3>
+            <p class="text-gray-500 mt-2">
+                Quality and customer satisfaction come first.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="bg-snackbrown text-white">
+
+    <div class="max-w-7xl mx-auto px-5 py-16">
+
+        <div class="text-center">
+            <p class="text-snackyellow font-bold">CUSTOMER LOVE</p>
+            <h2 class="text-4xl font-bold mt-2">What Our Customers Say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7 mt-10">
+
+            <div class="bg-white text-snackbrown rounded-2xl p-7">
+                <p class="text-yellow-500 text-xl">★★★★★</p>
+                <p class="mt-4 text-gray-600">
+                    "The snacks arrived fresh and perfectly packed.
+                    The chocolate cookies were amazing!"
+                </p>
+                <h3 class="font-bold mt-5">Ananya R.</h3>
+                <p class="text-sm text-gray-500">Chennai</p>
+            </div>
+
+            <div class="bg-white text-snackbrown rounded-2xl p-7">
+                <p class="text-yellow-500 text-xl">★★★★★</p>
+                <p class="mt-4 text-gray-600">
+                    "I loved the combo box. So many different snacks
+                    at a really good price."
+                </p>
+                <h3 class="font-bold mt-5">Rahul K.</h3>
+                <p class="text-sm text-gray-500">Bengaluru</p>
+            </div>
+
+            <div class="bg-white text-snackbrown rounded-2xl p-7">
+                <p class="text-yellow-500 text-xl">★★★★★</p>
+                <p class="mt-4 text-gray-600">
+                    "Fast delivery and excellent quality.
+                    Snackify has become my weekend favorite."
+                </p>
+                <h3 class="font-bold mt-5">Meera S.</h3>
+                <p class="text-sm text-gray-500">Coimbatore</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="max-w-5xl mx-auto px-5 py-16">
+
+    <div class="bg-snackorange rounded-3xl p-8 md:p-12 text-white text-center">
+
+        <p class="font-bold">STAY IN THE LOOP</p>
+
+        <h2 class="text-3xl md:text-4xl font-bold mt-3">
+            Get Snack Deals in Your Inbox
+        </h2>
+
+        <p class="mt-3 text-orange-100">
+            Subscribe to receive new product updates, special offers
+            and exclusive discounts.
+        </p>
+
+        <div class="max-w-xl mx-auto flex mt-7">
+            <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full px-5 py-3 rounded-l-full text-gray-800 outline-none">
+
+            <button class="bg-snackbrown px-6 py-3 rounded-r-full font-bold">
+                Subscribe
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-snackbrown text-white">
+
+    <div class="max-w-7xl mx-auto px-5 py-12">
+
+        <div class="grid md:grid-cols-4 gap-10">
+
+            <div>
+                <h2 class="text-2xl font-bold text-snackyellow">Snackify</h2>
+                <p class="text-gray-300 mt-4 leading-7">
+                    Your online destination for delicious,
+                    crispy and irresistible snacks.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <div class="space-y-2 mt-4 text-gray-300">
+                    <p>Home</p>
+                    <p>Categories</p>
+                    <p>Products</p>
+                    <p>Offers</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg">Customer Care</h3>
+                <div class="space-y-2 mt-4 text-gray-300">
+                    <p>Track Order</p>
+                    <p>Delivery Information</p>
+                    <p>Return Policy</p>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg">Contact</h3>
+                <div class="space-y-3 mt-4 text-gray-300">
+                    <p>📍 Chennai, India</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉ hello@snackify.com</p>
+                    <p>⏰ 9 AM - 10 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400">
+            <p>© 2026 Snackify. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
